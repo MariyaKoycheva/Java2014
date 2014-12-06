@@ -12,14 +12,16 @@ package u4;
  */
 public class U4_4 {
     public static void main(String [] args){
-        String names[]={"Mariya", "Tanya","dariya","gergina", "Radost"};
-        letterUpperNames(ourNames);
+        String[] names={"Mariya", "Tanya","dariya","gergina", "RADOST", "Radost"};
+        onlyUpper(names);
     }
-   public static void letterUpperNames(String m[], String search){
-                String ourNames = names.toUpperCase();
-        System.out.println();
-       
-   } 
+public static void onlyUpper(String[] arr){
+    for(String  i:arr){
+        if(i.matches("^[A-Z].*"/*{"+i.length()+"}"*/)){
+            System.out.println(i);
+        }
+    }
+}   
+                
 }
 
-}
